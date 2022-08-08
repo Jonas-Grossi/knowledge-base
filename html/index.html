@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios HTML</title>
+</head>
+
+<body>
+    <header>
+        <h1>Exercicios HTML</h1>
+
+    </header>
+    <nav>
+        <a href="teste.html">00 - Teste</a>
+        <a href="texto1.html">01 - Texto 1</a>
+        <a href="texto2.html">02 - Texto 2</a>
+        <a href="lista.html">03 - Lista </a>
+        <a href="listaAninhada.html">04 - Lista Aninhada</a>
+        <a href="links.html">05 - Links </a>
+        <a href="tabela.html">06 - Tabelas </a>
+        <a href="/html/form/form.html">07 - Formularios </a>
+        <a href="/html/imagens.html">08 - Imagens </a>
+        <a href="/html/video.html">09 - Video </a>
+        <a href="/html/tagsNaoVisuais.html">10 - Tags Não Visuais </a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        <br>
+
+        Curso de Web Moderno
+
+    </footer>
+
+    <script>
+        //seleciona todos os links e percorre com foreach
+        document.querySelectorAll('a').forEach(link => {
+            //cria uma constante e pega a secao onde será exibido 
+            const conteudo = document.getElementById('conteudo')
+            //funcao a ser executada quando occorer o click
+            link.onclick = function (e) {
+                //previnir de abrir a pagina do link
+                e.preventDefault(e)
+                //requisição ajax (promise) em cima do link que obteve
+                fetch(link.href)
+                //reps recebe um nova funcao para retornar outra promise
+                .then(resp => resp.text())
+                //conteudo vai receber a pagina do click
+                .then(html => conteudo.innerHTML = html)
+                
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>

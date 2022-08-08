@@ -1,0 +1,8 @@
+Para criarmos um novo projeto com react podemos rodar o
+comando no cmd:
+npx create-react-app meu-projeto
+
+E sim tudo pronto já podemos rodar nosso projeto. No seu
+cmd você pode dar cd meu-projeto para entrar dentro da
+pasta do projeto pelo cmd e agora rode o comando:
+npm start
