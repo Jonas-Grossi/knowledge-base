@@ -1,0 +1,6 @@
+instalar nodemon globalmente
+npm install -g nodemon
+instalar nodemon na aplicacao
+npm i --save-dev nodemon
+modo desenvolvimentos reinicia o servidor toda vez que mudamos o codigo
+nodemon "nome.js"
