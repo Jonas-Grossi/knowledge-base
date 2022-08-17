@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>
+        /*classList.add chama o estilo destaque do css*/
+        document.getElementById('primeiro').classList.add('destaque')
+        /*selecionou elementos com a tag div e armazenou em divs*/
+        const divs = docment.getElementByTagName('div')
+        Array.from(divs).forEach(e => e.classList.remove('destaque'))
+        const divArray = [...divs]
+        divsArray.forEach(e => e.classList.add('destaque'))
+
+        const ultimosElementos = document.getElementsByClassName('ultimo')
+        for (let e of ultimosElementos) {
+            e.classList.remove('destaque')
+
+        }
+    </script>
+</body>
+
+</html>
