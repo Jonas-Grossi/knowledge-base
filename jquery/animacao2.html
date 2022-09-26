@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Animação #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+    <style>
+        body {
+            position: relative;
+            background-color: #999;
+            color: #000;
+        }
+
+        div {
+            position: absolute;
+            display: inline;
+            border: solid 10px #000;
+            padding: 50px;
+            font-size: 3em;
+            background-color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Animar!</div>
+
+    <script>
+        
+
+        $(function () {
+            function alterarLargura(valor, duracao) {
+                return new Promise((resolve, reject) => {
+                    try{
+                        $('div').animate({ width: `+=${valor}` }, duracao)
+                    } catch (e) {
+                        rejetc(e)
+                    }
+                })
+            }
+ 
+            function moverDiagonal(valor, duracao) {
+                return new Promise((resolve, reject) => {
+                    try{
+                        $('div').animate({ top: `+=${valor}`, left: `+=${valor}` }, duracao)
+                    } catch (e) {
+                        reject(e)
+                    }
+                })
+            }
+ 
+            function girar(valor, duracao) {
+                return new Promise((resolve, reject) => {
+                    try {
+                        $('div').animate( { transform: `+=${valor}` }, {
+                            step: function (valor) {
+                                $(this).css('transform', `rotate(${valor}deg)`)
+                            },
+                            duration: duracao,
+                            easing: 'linear'
+                        })
+                    } catch (e) {
+                        reject(e)
+                    }
+                })
+            }
+ 
+            alterarLargura(300, 100)
+                .then(alterarLargura(-300,100))
+                .then(moverDiagonal(300, 600))
+                .then(girar(3300, 3000))
+                .catch(e => console.log(e))
+        })
+
+    </script>
+</body>
