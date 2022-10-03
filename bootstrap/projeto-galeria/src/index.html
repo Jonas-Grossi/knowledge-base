@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <!--criar um javascript que vai ler wm-include e injetar dentro do body apartir de include via ajax 
+        apartir da leitura da propriedade-->
+    <header wm-include="/pages/template/header.html"></header>
+    <!--background light passando a propriedade include para injetar na pagina usando ajax -->
+    <main class="bg-light" wm-include="/pages/galery/galery.html"></main>
+    <!--adicionando rodape-->
+    <footer class="footer" wm-include="/pages/template/footer.html"></footer>
+    <!--vai ser gerado no build webpack-->
+    <script src="app.js"></script>
+</body>
+
+</html>

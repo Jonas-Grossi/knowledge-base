@@ -1,0 +1,53 @@
+<!--barra de navbar cor do fundo do navbar -->
+<div class="navbar navbar-dark bg-dark box-shadow">
+    <!--conteudo do  container=manter os dados alinhados, flexbox between para alinhar com espacos(inicio,centro e fim) -->
+    <div class="container d-flex justify-content-between">
+        <!--navbar-brand = titulo ,d-flex=definir flexbox,aling-items= alinhar os items no centro-->
+        <a href="#" class="navbar-brand d-flex align-items-center">
+            <!--icone da camera,nome navbarbrand do tipo strong(forte) -->
+            <i class="fa fa-camera-retro"></i><strong class="pl-2">Galeria</strong>
+        </a>
+        <!--botao do toogle com collapse para abrir e fechar data-toggle=collapse como o elemento irar sumir e voltar
+        data-target="#header",header esta definida mais em baixo ela que ira realizar a funcao de abrir e fechar-->
+        <button class="navbar-toggler collapsed"
+           
+            data-toggle="collapse" data-target="#header">
+            <!--icone toogle-->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+    </div>
+    <!--fim da barra-->
+    <!--configuração do toogle para abrir o menu-->
+</div>
+<!--definindo a div header-->
+<div class="bg-dark collapse" id="header">
+    <div class="container">
+        <!--cria uma linha onde irar ter as informacoes-->
+        <div class="row">
+            <!--dispositivos pequenos 8 colunas e dispositivos medios 7 colunas,padding 4 no eixo y-->
+            <div class="col-sm-8 col-md-7 py-4">
+               <!--texto e branco-->
+                <h4 class="text-white">Sobre</h4>
+                <!--texto em cinza -->
+                <p class="text-muted">Escreva sobre vc...</p>
+            </div>
+            <!--dipositivos pequenos 4 colunas e  deslocamento medio de 1 padding 4 eixo y-->
+            <div class="col-sm-4 offset-md-1 py-4">
+                <h4 class="text-white">Contato</h4>
+                <!--lista sem estilo-->
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="text-white">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/jonas.grossi/" class="text-white">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="mailto:#" class="text-white">Email</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

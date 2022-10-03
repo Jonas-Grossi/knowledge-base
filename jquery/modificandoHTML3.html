@@ -13,6 +13,7 @@
     <div id='conteudo'></div>
 
     <script>
+        //faz o script ser lido quando carrega a pagina
         $(document).ready(function(){
         const pessoas = [
             { nome: 'Ana', nota: 9.1 },
@@ -21,15 +22,16 @@
             { nome: 'Julia', nota: 9.7 }
         ]
         const linhas = pessoas.map(p => {
+            //substitui o conteudo da tabela por p.nome e p.nota
             const tdNome = $('<td>').html(p.nome)
-            const tdNota = $('<td>').html(p.nota)
-            //return $('<tr>').append(tdNome).append(tdNota)
-            //return $('<tr>').append([tdNome,tdNota])
-            return $('<tr>').append(tdNome, tdNota)
+           const tdNota = $('<td>').html(p.nota)
+            return $('<tr>').append(tdNome).append(tdNota)
+           // return $('<tr>').append([tdNome,tdNota])
+            //retornar 
+            //return $('<tr>').append(tdNome, tdNota)
         })
-
-        const tabela = $('<tabela>').append(linhas)
-            .css('border', 'solid 5px')
+        //cria a tabela com as linhas tr
+        const tabela = $('<table>').append(linhas).css('border', 'solid 5px')
         $('#conteudo').append(tabela)
 
 

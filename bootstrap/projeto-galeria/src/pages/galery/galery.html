@@ -1,0 +1,51 @@
+<!--div com o url que sera puxada no codigo javascript-->
+<div wm-include="/pages/galery/galeryHeader.html"></div>
+<!--container-->
+<div class="container mt-5">
+    <!-- city buttons -->
+    <!--flexbox e linhas que teram itens alinhado no centro com padding bottom 5 -->
+    <div class="row justify-content-center pb-5">
+        <!--criando a div do botoes usando -->
+        <div wm-city-buttons></div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <!--dispositivo pequeno vai ocupar as 12 colunas,medio 6 e grande 3-->
+        <div class="col-12 col-md-6 col-lg-3">
+            <!--importando imagens com a classe img-fluid e a
+             propriedade personalizada wm-city para realizar o filtro-->
+            <img src="/imgs/ny1.png" class="img-fluid mb-4"
+                wm-city="New York">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <img src="/imgs/ny2.png" class="img-fluid mb-4"
+                wm-city="New York">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <img src="/imgs/floripa1.png" class="img-fluid mb-4"
+                wm-city="Florianópolis">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <img src="/imgs/ny3.png" class="img-fluid mb-4"
+                wm-city="New York">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <img src="/imgs/rj1.png" class="img-fluid mb-4"
+                wm-city="Rio de Janeiro">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <img src="/imgs/ny4.png" class="img-fluid mb-4"
+                wm-city="New York">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <img src="/imgs/rj1.png" class="img-fluid mb-4"
+                wm-city="Rio de Janeiro">
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <img src="/imgs/floripa1.png" class="img-fluid mb-4"
+                wm-city="Florianópolis">
+        </div>
+    </div>
+</div>
+<script>
+    $('[wm-city-buttons]').cityButtons()
+</script>
