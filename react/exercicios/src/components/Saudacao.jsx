@@ -6,6 +6,12 @@ export default class Saudacao extends Component {
         tipo: this.props.tipo,
         nome: this.props.nome
     }
+constructor(props){
+    super(props)
+   this.setTipo = this.setTipo.bind(this)
+
+}
+
     setTipo(e) {
         //funcao para alterar o estado
         this.setState({ tipo: e.target.value })
@@ -28,7 +34,7 @@ export default class Saudacao extends Component {
                 <input type="text" placeholder="Tipo..."
                     value={tipo}
                     //em react para o input precisa ter a funcao onchange para ser alterado
-                    onChange={e => this.setTipo(e)} />
+                    onChange={this.setTipo} />
                 <input type="text" placeholder="Nome..." value={nome}
                     onChange={e => this.setNome(e)} />
             </div>
