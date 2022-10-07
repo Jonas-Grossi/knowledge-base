@@ -3,16 +3,23 @@
   font-family: 'RobotoMono';
   src: url('./fonts/RobotoMono-Thin.ttf')
 }
-*{
-  font-family: 'RobotoMono',monospace;
+
+* {
+  font-family: 'RobotoMono', monospace;
 }
-body{
+
+body {
+  /*flexbox*/
   display: flex;
   /*ocupar a altura toda da tela*/
   height: 100vh;
+  /*centralizar a calculadora na horizontal*/
   justify-content: center;
+  /*centralizar a calculadora na vertical*/
   align-items: center;
+  /*alinhar texto no centro*/
   text-align: center;
   color: #fff;
-  background: linear-gradient(to right,rgb(83,105,118),rgb(41,46,73));
+  /*cor no site uigradients.com*/
+  background: linear-gradient(to right, rgb(83, 105, 118), rgb(41, 46, 73));
 }

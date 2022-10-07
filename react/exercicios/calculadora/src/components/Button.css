@@ -1,5 +1,8 @@
+/*criar variaveis*/
 :root {
+    /*backgraund botao*/
     --bg-button: #f0f0f0;
+    /*borda*/
     --border-button: solid 1px #888;
 
 }
@@ -7,29 +10,34 @@
 .button {
     font-size: 1.4em;
     background-color: var(--bg-button);
+    /*sem borda*/
     border: none;
+    /*borda a direita*/
     border-right: var(--border-button);
+    /*borda em baixo*/
     border-bottom: var(--border-button);
+    /*efeito quando clicka no botao*/
     outline: none;
 }
-
+/*efeito quando clicla no botão*/
 .button:active {
     background-color: #ccc;
 }
-
+/*o botao 0 ocupa duas colunas*/
 .button.double {
     grid-column: span 2;
 }
-
+/*o botao AC ocupa tres colunas*/
 .button.triple {
 
     grid-column: span 3;
 }
-
+/*botoes de operação tem backgraund laranja e texto branco*/
 .button.operation{
     background-color:#fa8231 ;
     color: #FFF;
 }
+/*click mais escuro nos botoes de operação*/
 .button.button.operation:active{
     background-color: #fa8231cc;
 }

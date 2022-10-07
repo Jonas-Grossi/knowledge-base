@@ -1,11 +1,19 @@
+/*organização dos botoes*/
 .calculator {
+    /*altura*/
     height: 320px;
+    /*largura*/
     width: 235px;
+    /*borda redonda*/
     border-radius: 5px;
+    /*esconder valores que sairem fora da calculadora*/
     overflow: hidden;
     /*css grid*/
     display: grid;
+    /* 4 colunas cada uma ocupando 25% */
     grid-template-columns: repeat(4, 25%);
+    /*definindo o tamanho de  cada linha  o display tera o tamanho de 1 fr */
+
     grid-template-rows: 1fr 48px 48px 48px 48px;
 
 }
