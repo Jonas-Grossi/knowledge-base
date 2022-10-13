@@ -1,4 +1,12 @@
 import './Footer.css'
 import React from 'react'
 export default props =>
-<footer className="footer">Rodapé</footer>
+<footer className="footer">
+    <span>
+
+        Desenvolvido por 
+        <strong> Jonas<span className='text-danger'> Grossi</span></strong>
+    </span>
+    
+    
+</footer>
