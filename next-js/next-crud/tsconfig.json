@@ -1,3 +1,6 @@
+//precisa criar esse arquivo para usar typescript 
+//somente criar o arquivo tsconfig.json 
+
 {
   "compilerOptions": {
     "target": "ES2015",

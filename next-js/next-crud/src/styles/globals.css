@@ -1,5 +1,7 @@
 
-
+/*css global que impacta em toda a aplicação
+Home.Module.css impacta somente onde for importado
+  */
 html,
 body {
   padding: 0;

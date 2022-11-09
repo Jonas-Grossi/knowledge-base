@@ -1,3 +1,5 @@
+
+/**configuracao no site do tailwind */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
