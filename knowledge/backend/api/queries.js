@@ -1,3 +1,4 @@
+//forma recursiva de pegar categoria com os filhos se tiver
 module.exports = {
     categoryWithChildren: `
         WITH RECURSIVE subcategories (id) AS (

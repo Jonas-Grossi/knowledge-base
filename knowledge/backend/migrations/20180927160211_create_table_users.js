@@ -1,4 +1,4 @@
-
+//aqui temos as migraçoes para serem realizadas no banco com as mudanças
 exports.up = function (knex, Promise) {
     return knex.schema.createTable('users', table => {
         table.increments('id').primary()
@@ -8,7 +8,7 @@ exports.up = function (knex, Promise) {
         table.boolean('admin').notNull().defaultTo(false)
     })
 };
-
+//volta a versao anterior em users
 exports.down = function (knex, Promise) {
     return knex.schema.dropTable('users')
 };
